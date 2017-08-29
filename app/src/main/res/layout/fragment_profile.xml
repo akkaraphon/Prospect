@@ -4,10 +4,80 @@
     android:layout_height="match_parent"
     tools:context="com.example.pmakkaraphon.prospect.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblCampaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Campaign :" />
+
+                <Spinner
+                    android:id="@+id/txtCampaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblDatesave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:text="วันที่บันทึก :" />
+
+                <EditText
+                    android:id="@+id/txtDatesave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/lblDatecome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:text="วันที่บันทึก :" />
+
+                <EditText
+                    android:id="@+id/txtDatecome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </FrameLayout>
