@@ -7,8 +7,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,16 +25,17 @@
                     android:id="@+id/lblCampaign"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="18dp"
-                    android:text="Campaign :" />
+                    android:layout_weight="2"
+                    android:text="Campaign :"
+                    android:textSize="18dp" />
 
                 <Spinner
                     android:id="@+id/txtCampaign"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="18dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:entries="@array/campaign"
+                    android:textSize="18dp" />
 
             </LinearLayout>
 
@@ -48,36 +49,304 @@
                     android:id="@+id/lblDatesave"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="18dp"
                     android:layout_weight="1"
-                    android:text="วันที่บันทึก :" />
+                    android:text="วันที่บันทึก :"
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/txtDatesave"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="18dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:id="@+id/lblDatecome"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="18dp"
                     android:layout_weight="1"
-                    android:text="วันที่บันทึก :" />
+                    android:text="วันที่บันทึก :"
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/txtDatecome"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="18dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblPrefix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="คำนำหน้า :"
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/txtPrefix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/prefix"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="ชื่อ :"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblLastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="นามสกุล :"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/txtLastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="วันเกิด :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblIDCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="เลขที่บัตร ปชช :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtIDCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblExpID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="วันหมดอายุ :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtExpID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblTel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="โทรศัพท์ :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtTel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="โทรศัพท์มือถือ :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="อีเมล :"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="ต้องการรับ SMS :"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/txtSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:textSize="18dp">
+
+                    <RadioButton
+                        android:id="@+id/txtYES"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="รับ"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/txtNO"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ไม่รับ"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
 
             </LinearLayout>
 
         </LinearLayout>
 
-
     </ScrollView>
+
 </FrameLayout>

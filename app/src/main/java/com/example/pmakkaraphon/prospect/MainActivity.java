@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Profile";
+                    return "ข้อมูลลูกค้า ";
                 case 1:
-                    return "Questionaire";
+                    return "แบบสอบถาม ";
             }
             return null;
         }

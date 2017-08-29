@@ -1,5 +1,17 @@
 <resources>
-    <string name="app_name">Prospect</string>
+    <string name="app_name">บันทึกข้อมูล และ ติดตาม ลูกค้า</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <string-array name="prefix">
+        <item>--กรุณาเลือก--</item>
+        <item>นาย</item>
+        <item>นาง</item>
+        <item>นางสาว</item>
+    </string-array>
+
+    <string-array name="campaign">
+        <item>--กรุณาเลือก--</item>
+    </string-array>
 </resources>
+

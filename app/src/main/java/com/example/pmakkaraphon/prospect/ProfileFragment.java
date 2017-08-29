@@ -6,8 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,6 +24,7 @@ public class ProfileFragment extends Fragment {
 
     EditText mDatesave;
     EditText mDatecome;
+    Spinner mPrefix;
 
     View v;
 
@@ -37,8 +40,10 @@ public class ProfileFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         v = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        mDatesave = (EditText) getActivity().findViewById(R.id.txtDatesave);
+        mPrefix = (Spinner) getActivity().findViewById(R.id.txtPrefix);
 
         final Calendar c = Calendar.getInstance();
         mDay = c.get(Calendar.DAY_OF_MONTH);
@@ -48,9 +53,7 @@ public class ProfileFragment extends Fragment {
         c.set(mYear, mMonth, mDay);
         Date date = c.getTime();
 
-        mDatesave = (EditText) getActivity().findViewById(R.id.btnDatesave);
         //mDatesave.setText(mDay + "-" + mMonth + "-" + mYear);
-
         return v;
     }
 
