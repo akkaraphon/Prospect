@@ -3,18 +3,18 @@ package com.example.pmakkaraphon.prospect;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-
 
 
 /**
@@ -22,17 +22,13 @@ import java.util.Date;
  */
 public class ProfileFragment extends Fragment {
 
-    EditText mDatesave;
-    EditText mDatecome;
+    TextView mDatesave;
+    TextView mDatecome;
     Spinner mPrefix;
+    RadioButton mChkAdd;
+    LinearLayout mLayoutCompeny;
 
     View v;
-
-    private int mDay;
-    private int mMonth;
-    private int mYear;
-    static final int DATE_DIALOG_ID = 0;
-
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -42,18 +38,22 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        mDatesave = (EditText) getActivity().findViewById(R.id.txtDatesave);
-        mPrefix = (Spinner) getActivity().findViewById(R.id.txtPrefix);
+        mDatesave = (TextView) v.findViewById(R.id.txtDatesave);
+        mDatecome = (TextView) v.findViewById(R.id.txtDatecome);
+        mPrefix = (Spinner) v.findViewById(R.id.txtPrefix);
+        mChkAdd = (RadioButton) v.findViewById(R.id.chkAdd);
+        mLayoutCompeny = (LinearLayout) v.findViewById(R.id.layoutCompeny);
 
-        final Calendar c = Calendar.getInstance();
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-        mMonth = c.get(Calendar.MONTH);
-        mYear = c.get(Calendar.YEAR);
-        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd ");
-        c.set(mYear, mMonth, mDay);
-        Date date = c.getTime();
+        // Current Date
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String formattedDate = df.format(c.getTime());
 
-        //mDatesave.setText(mDay + "-" + mMonth + "-" + mYear);
+        // txtResult
+        Log.d("runtime",formattedDate);
+        mDatesave.setText(formattedDate);
+        mDatecome.setText(formattedDate);
+
         return v;
     }
 
