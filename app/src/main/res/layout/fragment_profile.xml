@@ -7,7 +7,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -508,6 +508,7 @@
                     android:id="@+id/txtCity"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -531,6 +532,7 @@
                     android:id="@+id/txtState"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -554,6 +556,7 @@
                     android:id="@+id/txtDistrict"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -742,6 +745,7 @@
                     android:id="@+id/txtCityCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -765,6 +769,7 @@
                     android:id="@+id/txtStateCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -788,6 +793,7 @@
                     android:id="@+id/txtDistrictCon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:entries="@array/campaign"
                     android:layout_weight="1"
                     android:textSize="18dp" />
 
@@ -827,7 +833,7 @@
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
-                <RadioButton
+                <CheckBox
                     android:id="@+id/chkAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1004,6 +1010,7 @@
                         android:id="@+id/txtCityCompeny"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:entries="@array/campaign"
                         android:layout_weight="1"
                         android:textSize="18dp" />
 
@@ -1028,6 +1035,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:entries="@array/campaign"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -1050,6 +1058,7 @@
                         android:id="@+id/txtDistrictCompeny"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:entries="@array/campaign"
                         android:layout_weight="1"
                         android:textSize="18dp" />
 
@@ -1080,13 +1089,19 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="SUBMIT" />
 
             </LinearLayout>
 
